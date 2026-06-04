@@ -105,7 +105,7 @@
 <div class="container">
   <div class="header">
     <div class="header-left">
-      <div class="avatar">A</div>
+      <div class="avatar">🧑‍💼</div>
       <div>
         <div class="agent-name">Razz</div>
         <div class="agent-status">Online</div>
@@ -126,7 +126,7 @@
     {#each messages as msg}
       <div class="message {msg.sender === 'user' ? 'user' : 'ai'}">
         {#if msg.sender === "ai"}
-          <div class="msg-avatar">A</div>
+          <div class="msg-avatar">🧑‍💼</div>
         {/if}
         <div class="msg-col {msg.sender}">
           <div class="bubble">{msg.text}</div>
