@@ -45,7 +45,7 @@ app.use("/chat", chatRouter);
 
 // Serve Svelte frontend in production
 if (isProd) {
-  const frontendDist = path.join(__dirname, "../../frontend/dist");
+  const frontendDist = path.join(__dirname, "../frontend/dist");
   app.use(express.static(frontendDist));
   // All non-API routes serve the frontend
   app.get("*", (_req, res) => {
