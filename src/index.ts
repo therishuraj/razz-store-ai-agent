@@ -47,8 +47,8 @@ app.use("/chat", chatRouter);
 if (isProd) {
   const frontendDist = path.join(__dirname, "../frontend/dist");
   app.use(express.static(frontendDist));
-  // All non-API routes serve the frontend
-  app.get("*", (_req, res) => {
+  // All non-API routes serve the frontend (Express v5 requires named wildcard)
+  app.get("/{*splat}", (_req, res) => {
     res.sendFile(path.join(frontendDist, "index.html"));
   });
 }
